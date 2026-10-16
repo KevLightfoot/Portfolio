@@ -136,3 +136,23 @@ a { color: inherit; text-decoration: none; }
 .education-secondary {
   margin-top: 16px;
 }
+
+
+/* Profile portrait */
+.profile-photo {
+  width: 100%;
+  max-width: 320px;
+  height: 340px;
+  overflow: hidden;
+  border: 1px solid rgba(70, 160, 165, 0.55);
+  border-radius: 4px;
+  background: #11151b;
+}
+
+.profile-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
