@@ -174,3 +174,79 @@ a { color: inherit; text-decoration: none; }
 }
 
 
+/* ===== Expandable coursework dropdowns ===== */
+.coursework {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+
+.coursework summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 0;
+  color: var(--cyan);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.2s ease;
+}
+
+.coursework summary:hover {
+  color: #a0f5f3;
+}
+
+.coursework summary::-webkit-details-marker {
+  display: none;
+}
+
+.coursework summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--cyan);
+}
+
+.coursework[open] summary::after {
+  content: "−";
+}
+
+.coursework ul {
+  margin: 10px 0 12px;
+  padding-left: 15px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.coursework li {
+  padding-left: 2px;
+  margin-bottom: 3px;
+}
+
+.coursework li::marker {
+  color: var(--cyan);
+}
+
+/* Keep the second degree spaced below the first */
+.education-secondary {
+  margin-top: 16px;
+}
+
+/* Mobile spacing */
+@media (max-width: 700px) {
+  .coursework summary {
+    padding: 11px 0;
+  }
+
+  .coursework ul {
+    line-height: 2;
+  }
+}
+
+
