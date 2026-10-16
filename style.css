@@ -139,22 +139,26 @@ a { color: inherit; text-decoration: none; }
 
 
 /* Profile portrait */
+
 .profile-photo {
   width: 100%;
   max-width: 320px;
   height: 340px;
+  padding: 0 !important;
   overflow: hidden;
   border: 1px solid rgba(70, 160, 165, 0.55);
   border-radius: 4px;
   background: #11151b;
+  line-height: 0;
 }
-
 
 .profile-photo img {
   display: block;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center top;
 }
 
